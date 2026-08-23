@@ -1,0 +1,52 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1a1a1a;
+  --sub: #5c5c5c;
+  --line: #e5e5e5;
+  --card: #f7f7f8;
+  --accent: #2b5fd9;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131316;
+    --fg: #ececf0;
+    --sub: #a0a0a8;
+    --line: #2c2c32;
+    --card: #1c1c21;
+    --accent: #7aa2f7;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 0 20px 72px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+  line-height: 1.75;
+  font-size: 16px;
+  word-break: keep-all;
+}
+main { max-width: 720px; margin: 0 auto; }
+header { padding: 48px 0 28px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+h1 { font-size: 1.75rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+h2 { font-size: 1.2rem; margin: 40px 0 12px; letter-spacing: -0.01em; }
+h3 { font-size: 1rem; margin: 24px 0 8px; }
+p, li { color: var(--fg); }
+.lead { color: var(--sub); margin: 0; }
+.meta { color: var(--sub); font-size: 0.875rem; margin-top: 12px; }
+a { color: var(--accent); }
+nav { margin: 24px 0 0; display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.9375rem; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 16px 0; }
+.card p:last-child { margin-bottom: 0; }
+.card p:first-child { margin-top: 0; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.9375rem; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--sub); font-weight: 600; white-space: nowrap; }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--sub); font-size: 0.875rem; }
+.todo { background: #fff4e5; border: 1px solid #ffb84d; color: #6b4300; border-radius: 8px; padding: 12px 16px; }
+@media (prefers-color-scheme: dark) {
+  .todo { background: #3a2c12; border-color: #7a5a1f; color: #f0d9a8; }
+}
